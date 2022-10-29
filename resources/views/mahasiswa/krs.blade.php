@@ -66,12 +66,12 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">E. Laurianto</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Kenrick Lau</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6><b>Erick Laurianto</b></h6>
+              <h6><b>Kenrick Lau</b></h6>
               <span><b>Admin</b></span>
             </li>
             <li>
@@ -122,8 +122,6 @@
               <h5 class="card-title">KRS</h5>
               <a href="/create"><button type="button" class="btn btn-primary"><i class="icon ri-add-fill"></i> Tambah Data</button></a>
               <br><br>
-
-              <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
@@ -139,23 +137,14 @@
                         $krs = mahasiswa::get();
                         foreach ($krs as $mahasiswa) {
                             echo "<tr>";
-                            echo "<th scope='row'>".$mahasiswa->studentID."</td>";
-                            echo "<td>".$mahasiswa->nama."</td>";
+                            echo "<th scope='row'>".$mahasiswa->kode_krs."</td>";
+                            echo "<td>".$mahasiswa->."</td>";
                             echo "<td>".$mahasiswa->jurusan."</td>";
                             echo "<td>".$mahasiswa->tahunMasuk."</td>";
                             echo "<td>"."<a href='/edit' title='Edit Data'><button type='button' class='btn btn-sm btn-warning'><i class='icon ri-ball-pen-fill'></i></button></a>"."&nbsp; "."<a href='#' title='Hapus Data'><button type='button' class='btn btn-sm btn-danger'><i class='icon ri-delete-bin-2-fill'></i></button></a>"."</td>";
                             echo "</tr>";
                         }
                     ?>
-                    {{-- Template Table --}}
-                  <!-- <tr>
-                    <th scope="row">08/01/2022</th>
-                    <td>K0003</td>
-                    <td>Pemberian obat BGF-9775</td>
-                    <td>Pengobatan</td>
-                    <td>4 Bulan</td>
-                    <td>Cancel</td>
-                  </tr> -->
                 </tbody>
               </table>
             </div>
